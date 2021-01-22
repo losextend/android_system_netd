@@ -95,6 +95,7 @@ interface INetd {
   void firewallSetFirewallType(int firewalltype);
   void firewallSetInterfaceRule(in @utf8InCpp String ifName, int firewallRule);
   void firewallSetUidRule(int childChain, int uid, int firewallRule);
+  void firewallSetMACAddressRule(in @utf8InCpp String macAddr, int firewallRule);
   void firewallEnableChildChain(int childChain, boolean enable);
   @utf8InCpp String[] interfaceGetList();
   android.net.InterfaceConfigurationParcel interfaceGetCfg(in @utf8InCpp String ifName);
